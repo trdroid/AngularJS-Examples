@@ -34,4 +34,18 @@ A module called "sampleApp" is defined with no dependencies.
 A controller called "FirstController" is registered on the module by calling the *controller()* function and passing it
 
 * the name of the controller "FirstController"
-* a constructor function that is declared with a *$scope* parameter. When AngularJS encounters *ng-controller='FirstController'*, it creates a new *scope* instance and passes it as an argument to the controller function 
+* a constructor function that is declared with a *$scope* parameter. When AngularJS encounters *ng-controller='FirstController'*, it creates a new *scope* instance and passes it as an argument to the controller function
+
+### Controller dependencies
+
+A controller can declare the services/objects that it depends on by providing their names as parameters to its constructor function.
+
+```javascript
+angular.module('sampleApp', []).controller('FirstController', function($scope, customService) {
+  $scope.message = "Hello World!";
+});
+```
+
+**$ Prefix: AngularJS services/objects**
+
+AnglarJS follows a naming convention for the services and objects that it offers by prefixing their names with "$", so the names of any custom services/objects should not start with a "$".

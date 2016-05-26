@@ -40,6 +40,10 @@ A controller called "FirstController" is registered on the module by calling the
 
 A controller can declare the services/objects that it depends on by providing their names as parameters to its constructor function.
 
+Example:
+
+Defining a controller called "FirstController" that declares its dependencies to be $scope and "customService"
+
 ```javascript
 angular.module('sampleApp', []).controller('FirstController', function($scope, customService) {
   $scope.message = "Hello World!";

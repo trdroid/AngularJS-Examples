@@ -1,5 +1,7 @@
-var app = angular.module('app', []);
+(function() {
+  var app = angular.module('app', []);
 
-app.controller('WishingController', function($scope) {
-  $scope.message = 'Hello World!';
-});
+  app.controller('WishingController', function($scope) {
+    $scope.message = 'Hello World!';
+  });
+})();

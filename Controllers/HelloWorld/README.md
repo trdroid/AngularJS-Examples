@@ -19,3 +19,13 @@ app.controller('WishingController', function($scope) {
   $scope.message = 'Hello World!';
 });
 ```
+
+```javascript
+(function() {
+  var app = angular.module('app', []);
+
+  app.controller('WishingController', function($scope) {
+    $scope.message = 'Hello World!';
+  });
+})();
+```

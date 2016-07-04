@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <link rel="stylesheet" href="deps/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+  <script src="deps/angular-1.5.8.js"></script>
+  <script src="deps/angular-route-1.5.8.js"></script>
+  <script src="app-module.js"></script>
+</head>
+<body ng-controller="homeController">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">GiggleMail</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#mails">Mails</a></li>
+          <li><a href="#friends">Friends</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div id="main">
+    <div ng-view></div>
+  </div>
+</body>
+</html>

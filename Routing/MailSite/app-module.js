@@ -3,25 +3,25 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'pages/home.html',
+      templateUrl: 'templates/home.html',
       controller: 'homeController'
     })
-    .when('pages/mails', {
-      templateUrl: 'pages/mails.html',
+    .when('templates/mails', {
+      templateUrl: 'templates/mails.html',
       controller: 'mailsController'
     })
-    .when('pages/friends', {
+    .when('templates/friends', {
       templateUrl: 'pages/friends.html',
       controller: 'friendsController'
     })
-    .when('pages/settings', {
+    .when('templates/settings', {
       templateUrl: 'pages/settings.html',
       controller: 'settingsController'
     })
     .otherwise({
-      templateUrl: 'pages/invalidRoute.html'
+      templateUrl: 'templates/invalidRoute.html'
       controller: 'invalidRouteController'
-    })
+    });
 });
 
 app.controller('homeController', function($scope) {

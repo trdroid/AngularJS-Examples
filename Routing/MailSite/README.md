@@ -1,3 +1,6 @@
+**Project contents**
+ 
+![](_misc/Project%20contents.png)
 
 ### Creating a server to serve the files
 
@@ -19,17 +22,17 @@ Use `npm install <pkg> --save` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-name: (MailSite) 
+name: (MailSite)
 Sorry, name can no longer contain capital letters.
 name: (MailSite) mail-site
-version: (1.0.0) 
+version: (1.0.0)
 description: A sample email page
 entry point: (app-module.js) server.js
-test command: 
-git repository: 
-keywords: 
-author: 
-license: (ISC) 
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
 About to write to /home/droid/onGit/AngularJS-Tryouts/Routing/MailSite/package.json:
 
 {
@@ -86,3 +89,7 @@ serve-static@1.11.1 node_modules/serve-static
   }
 }
 ```
+
+**Project contents**
+
+![](_misc/after%20npm%20init%20and%20installing%20modules.png)

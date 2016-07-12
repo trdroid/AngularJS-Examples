@@ -1,8 +1,8 @@
 **Project contents**
- 
+
 ![](_misc/Project%20contents.png)
 
-### Creating a server to serve the files
+### Setting up to create a server to serve the files
 
 Create a *package.json* to maintain a list of dependencies are the folder *node_modules* where all the dependencies are stored is ignored in the repository.
 
@@ -90,6 +90,21 @@ serve-static@1.11.1 node_modules/serve-static
 }
 ```
 
+Note that the name of the entry point or the main file is specified as "server.js", which is created in the following section.
+
 **Project contents**
 
 ![](_misc/after%20npm%20init%20and%20installing%20modules.png)
+
+### Setting up the server
+
+Create *MailSite/server.js*
+
+```javascript
+var connect = require('connect');
+var serveStatic = require('serve-static');
+
+connect().use(serveStatic(__dirname)).listen(8999, function() {
+  console.log('Server is running ...');
+});
+```

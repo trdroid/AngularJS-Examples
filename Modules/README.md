@@ -12,7 +12,7 @@ A module in AnglarJS is a named-container that encapsulates different components
 
 **Creating a module**
 
-A module can be created using the following function:
+A module can be created using the *angular.module()* function.
 
 ```javascript
 angular.module(<module name>, <an array of dependencies>)
@@ -22,7 +22,14 @@ The *angular.module()* function serves the following purposes:
 
 * Creating modules
 * Retrieving modules
-* Registering components
+* Attaching/Registering components
+
+The *angular.module()* function returns
+
+* an reference to the newly created module (or)
+* a reference to an already created module
+
+depending on if the module has already been created or not.
 
 Examples:
 
@@ -36,4 +43,27 @@ Defining a module "secondModule" that depends on modules "sampleModule", "simple
 
 ```javascript
 angular.module("secondModule", ["sampleModule", "simpleModule"]);
+```
+
+### Registering components
+
+**Attaching a Controller**
+
+A controller can be attached to a module by calling the *controller()* function on an AngularJS's *module* instance.
+
+```javascript
+<module instance>.controller(<controller name>, <controller function>)
+```
+
+**Attaching a Directive**
+
+A directive can be attached to a module by calling the *directive()* function on an AngularJS's *module* instance.
+
+```javascript
+<module instance>.directive(<directive name>, function() {
+  // register the directive here
+  return {
+
+  };
+})
 ```

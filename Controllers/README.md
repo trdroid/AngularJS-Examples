@@ -7,8 +7,31 @@ The main purpose of a controller is to attach
 * models
 * functions containing business logic
 
-to the scope, so that they can be accessed in the views. The scope is a binding between a controller and a view.
+to the scope as properties, so that they can be accessed in the views.
+As the scope acts a binding between the controller and the view, the view can access the properties (models and functions) attached to the scope by the controller.
 
 ![](_misc/Controller-Scope-View.png)
 
-In AngularJS, a controller is written as a constructor function that is instantiated when AngularJS encounters an *ng-controller* directive in HTML.
+
+### Defining a controller
+
+In AngularJS, a controller is registered on a *module* by calling the *controller()* function on the module instance and passing it
+
+* the name of the controller (and)
+* the definition of a constructor function that is instantiated by AngularJS when it encounters an *ng-controller* directive in HTML. The parameter names declared in the controller's constructor function indicate AngularJS about the controller's dependencies. AngularJS then creates new instances and injects them into the constructor parameters when instantiating the controller. This mechanism is referred to as Dependency Injection.
+
+Example:
+
+Defining a controller called "FirstController":
+
+```javascript
+angular.module('sampleApp', []).controller('FirstController', function($scope) {
+  $scope.message = "Hello World!";
+});
+```
+
+A module called "sampleApp" is defined with no dependencies.
+A controller called "FirstController" is registered on the module by calling the *controller()* function and passing it
+
+* the name of the controller "FirstController"
+* a constructor function that is declared with a *$scope* parameter. When AngularJS encounters *ng-controller='FirstController'*, it creates a new *scope* instance and passes it as an argument to the controller function 
